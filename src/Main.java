@@ -1,14 +1,15 @@
 public class Main {
     public static void main(String[] args) {
-        float accountSum = 100;
-        float accountTopup = 1000;
-        float accountBalance = accountSum + accountTopup;
+        int accountSum = 100;
+        int accountTopup = 1100;
         int bonusSum;
+        int accountBalance = accountSum + accountTopup;
         if ( accountBalance > 1000 ) {
-            bonusSum = (int) accountBalance / 100;
+            bonusSum = accountTopup / 100;
+            accountBalance = accountSum + accountTopup + bonusSum;
         } else {
-            bonusSum = (int) 0;
-        }
+            bonusSum = 0;
+                    }
         System.out.println(bonusSum);
     }
 }
